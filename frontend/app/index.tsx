@@ -2,8 +2,9 @@ import React, { useEffect, useState } from "react";
 import { View, Text, Button, Alert, ActivityIndicator, StyleSheet, TextInput, TouchableOpacity, StatusBar } from "react-native";
 import axios from "axios";
 import { Calendar } from "react-native-calendars";
+import { API_URL } from "./config";
 
-const API_URL = process.env.API || "";
+
 export default function Index() {
   const [bookedDates, setBookedDates] = useState<string[]>([]);
   const [selectedDate, setSelectedDate] = useState<string | null>(null);
