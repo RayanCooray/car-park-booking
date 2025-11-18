@@ -24,7 +24,6 @@ app.get("/api/bookings", async (_req: Request, res: Response) => {
 
 app.post("/api/bookings", async (req: Request, res: Response) => {
   const { date, name } = req.body;
-
   if (!date || !name)
     return res.status(400).json({ error: "Missing date or name" });
 
